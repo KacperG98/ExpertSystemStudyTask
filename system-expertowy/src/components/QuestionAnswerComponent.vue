@@ -49,14 +49,19 @@
         userAnswer: 2
       };
     },
+    computed: {
+      answersList() {
+        return [this.negativeAnswerText, this.positiveAnswerText, 'Brak'];
+      }
+    },
     methods: {
       handleAnswer(answer) {
         this.userAnswer = answer;
         this.$emit('answer-selected', (answer == 2)? 0 : answer);
       },
       convertAnswer(answer){
-        let answersList = ['Nie', 'Tak', 'Brak']
-        return answersList[answer]
+        //let answersList = [this.negativeAnswerText, this.positiveAnswerText, 'Brak']
+        return this.answersList[answer]
       }
     }
   }

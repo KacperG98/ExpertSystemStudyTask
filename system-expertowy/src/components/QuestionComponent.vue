@@ -1,21 +1,26 @@
 <template>
     <div class="card p-3">
-      <h5 class="card-title">{{ question }}</h5>
-      <div class="d-flex justify-content-between">
-        <button 
-          class="btn btn-success"
-          @click="sendAnswer(1)"
-        >
-          {{ positiveAnswerText }}
-        </button>
-        <button 
-          class="btn btn-danger"
-          @click="sendAnswer(0)"
-        >
-          {{ negativeAnswerText }}
-        </button>
-      </div>
+  <h5 class="card-title">{{ question }}</h5>
+  <div class="row justify-content-between">
+    <div class="col-6 col-md-6">
+      <button 
+        class="btn btn-success"
+        @click="sendAnswer(1)"
+      >
+        {{ positiveAnswerText }}
+      </button>
     </div>
+    <div class="col-6 col-md-6">
+      <button 
+        class="btn btn-danger"
+        @click="sendAnswer(0)"
+      >
+        {{ negativeAnswerText }}
+      </button>
+    </div>
+  </div>
+</div>
+
   </template>
   
   <script>
